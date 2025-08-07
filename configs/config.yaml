@@ -1,0 +1,26 @@
+seed: 42
+
+data:
+  dataset_name: aiVShuman
+  data_path: "../data/aiVShuman"
+  label2name:
+    binary:
+      0: real
+      1: fake
+    multiclass:
+      0: real
+      1: sd3
+      2: sd21
+      3: sdxl
+      4: dalle
+      5: midjourney
+
+model:
+  extractor_name: "laion/CLIP-ViT-B-32-laion2B-s34B-b79K"
+  num_classes: 2
+
+training:
+  lr: 1e-4
+  epochs: 20
+  unfreeze_extractor: 0
+  use_gpu: 1
