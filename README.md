@@ -19,23 +19,24 @@ cd detect-ai-images-multidomain
 pip install -r requirements.txt
 ```
 
-Train a detector:
+Train your detector:
+set training and model parameters in configs/config.yaml file
 ```bash
 python 
-python train.py --config configs/clip_mlp_defactify.yaml
+python train.py
 ```
 
-Evaluate a model:
+Evaluate your detectors:
 ```bash
-python eval.py --model path/to/model.pth --data path/to/test_data/
+python eval.py
 ```
 
 ## 📂 Datasets
 
 Supported datasets:
-- **ArtiFact** – Set of generators, diverse domains
-- **Defactify** – Modern diffusion models + real images
-- **AI vs Human (Alex)** – Paired real/fake images from recent competition
+- [`ArtiFact`](https://www.kaggle.com/datasets/awsaf49/artifact-dataset) – Set of generators, diverse domains
+- [`Defactify`](https://huggingface.co/datasets/NasrinImp/Defactify4_Train) – Modern diffusion models + real images
+- [`AI vs Human`](https://www.kaggle.com/competitions/detect-ai-vs-human-generated-images) – Paired real/fake images from recent competition
 
 Scripts provided to format and split data for training.
 
